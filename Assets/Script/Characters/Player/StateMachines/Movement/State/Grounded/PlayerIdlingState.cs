@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerIdlingState : PlayerMovementState
+public class PlayerIdlingState : PlayerGroundedState
 {
 	public PlayerIdlingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
 	{
@@ -29,16 +29,5 @@ public class PlayerIdlingState : PlayerMovementState
 		}
 
 		OnMove();
-	}
-
-	private void OnMove()
-	{
-		if(shouldWalk)
-		{
-			stateMachine.ChangeState(stateMachine.WalkingState);
-			return;
-		}
-
-		stateMachine.ChangeState(stateMachine.RunningState);
 	}
 }

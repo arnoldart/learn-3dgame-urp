@@ -313,10 +313,13 @@ public class PlayerMovementState : IState
 
 	//#endregion
 
-	//#region Input Method
+	#region Input Method
+	
+	
+	
 	protected virtual void OnWalkToggleStarted(InputAction.CallbackContext ctx)
 	{
 		shouldWalk = !shouldWalk;
 	}
-	//#endregion
+	#endregion
 }
